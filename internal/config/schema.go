@@ -7,7 +7,7 @@ type Settings struct {
 	Endpoint string
 	Timeout time.Duration
 	Strict bool
-	MaxRetries int
+	MaxRetries int // maximum attempts after the initial request
 }
 
 func Default() Settings { return Settings{Mode: "safe", Endpoint: "/v1/events", Timeout: 5 * time.Second, Strict: true, MaxRetries: 3} }
